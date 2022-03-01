@@ -5,11 +5,25 @@
 
 trigger:
 - dev
-
+variables:
+  group: db1
 pool:
   name: DanielPool
 
 steps:
+- task: replacetokens@5
+  inputs:
+    rootDirectory: '/config'
+    targetFiles: 'database.config.js'
+    encoding: 'auto'
+    tokenPattern: 'default'
+    writeBOM: true
+    actionOnMissing: 'warn'
+    keepToken: false
+    actionOnNoFiles: 'continue'
+    enableTransforms: false
+    useLegacyPattern: false
+    enableTelemetry: true
 - task: NodeTool@0
   inputs:
     versionSpec: '10.x'
