@@ -13,8 +13,7 @@ pool:
 steps:
 - task: replacetokens@5
   inputs:
-    rootDirectory: '/'
-    targetFiles: 'config/database.config.js'
+    targetFiles: '**/*.config.js'
     encoding: 'auto'
     tokenPattern: 'default'
     writeBOM: true
