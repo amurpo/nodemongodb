@@ -1,0 +1,19 @@
+#azure pipeline nodejs
+trigger:
+  branches:
+    include:
+    - main
+    - dev
+resources:
+  repositories:
+    - repository: templates
+      type: git
+      name: Test2/Templates-Daniel
+
+variables:
+  - template: Variables/variables.yml@templates
+  
+name: $(date:yyyyMMdd)$(rev:.r)
+stages:
+- template: NodeJS/nodejs.yml@templates
+
