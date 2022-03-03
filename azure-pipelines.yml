@@ -4,7 +4,6 @@ trigger:
     include:
     - main
     - dev
-pr: none
 
 resources:
   repositories:
