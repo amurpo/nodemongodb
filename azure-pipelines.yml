@@ -9,7 +9,7 @@ resources:
   repositories:
     - repository: templates
       type: git
-      name: Test2/Templates-Daniel
+      name: Test/
 
 variables:
   - template: Variables/variables.yml@templates
