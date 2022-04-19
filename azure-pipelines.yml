@@ -11,8 +11,8 @@ resources:
       type: git
       name: Test/Test
 
-variables:
-  - template: Variables/variables.yml@templates
+#variables:
+ # - template: Variables/variables.yml@templates
   
 name: $(date:yyyyMMdd)$(rev:.r)
 stages:
